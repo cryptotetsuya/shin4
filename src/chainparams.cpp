@@ -77,27 +77,27 @@ public:
         consensus.nKeccakPowLimit = uint256S("000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 5 * 24 * 60 * 60; // 3.5 days
         consensus.nPowTargetSpacing = 0.5 * 60;
-        consensus.nChangePowHeight = 10;
-        consensus.BIP65Height = 0;
-        consensus.BIP66Height = 0;
-        consensus.newPowTargetTimespan = 5 * 24 * 60 * 60;
+        consensus.nChangePowHeight = 30;
+        consensus.BIP65Height = 30;
+        consensus.BIP66Height = 30;
+        consensus.newPowTargetTimespan = 0.5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 2700; // 75% of 8064
         consensus.nMinerConfirmationWindow = 3600; // nPowTargetTimespan / nPowTargetSpacing * 4
- //       consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
- //       consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
- //       consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
         // Deployment of BIP68, BIP112, and BIP113.
- //       consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
- //       consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1485561600; // January 28, 2017
- //       consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1517356801; // January 31st, 2018
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1485561600; // January 28, 2017
+       consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1517356801; // January 31st, 2018
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
- //       consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
- //       consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1485561600; // January 28, 2017
- //       consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1517356801; // January 31st, 2018
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1485561600; // January 28, 2017
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1517356801; // January 31st, 2018
 
         // The best chain should have at least this much work.
         //consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000005c13f99f6d0b1a908");
@@ -122,8 +122,8 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x68b8e2823f8d7a30c5b0ff1272ecbb519ccd5e5ce924a00b5ced468e045c9a2a"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-//        vSeeds.emplace_back("dnsseed.mircoin.net", true);
-//        vSeeds.emplace_back("creaseed.owldevelopers.site", true);
+        vSeeds.emplace_back("dnsseed.mircoin.net", true);
+        vSeeds.emplace_back("creaseed.owldevelopers.site", true);
         
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,50);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,122);
@@ -174,27 +174,27 @@ public:
         consensus.nKeccakPowLimit = uint256S("000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 5 * 24 * 60 * 60; // 1 day
         consensus.nPowTargetSpacing = 0.5 * 60;
-        consensus.nChangePowHeight = 10;
-        consensus.BIP65Height = 0;
-        consensus.BIP66Height = 0;
-        consensus.newPowTargetTimespan = 5 * 24 * 60 * 60;
+        consensus.nChangePowHeight = 20;
+        consensus.BIP65Height = 20;
+        consensus.BIP66Height = 20;
+        consensus.newPowTargetTimespan = 0.5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 2700; // 75% for testchains
         consensus.nMinerConfirmationWindow = 3600; // nPowTargetTimespan / nPowTargetSpacing
- //       consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
- //       consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
- //       consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
         // Deployment of BIP68, BIP112, and BIP113.
- //       consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
- //       consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1483228800; // January 1, 2017
- //       consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1517356801; // January 31st, 2018
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1483228800; // January 1, 2017
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1517356801; // January 31st, 2018
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
- //       consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
- //       consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1483228800; // January 1, 2017
- //       consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1517356801; // January 31st, 2018
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1483228800; // January 1, 2017
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1517356801; // January 31st, 2018
 
         // The best chain should have at least this much work.
         //consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000006fce5d67766e");
@@ -215,8 +215,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
- //       vSeeds.push_back(CDNSSeedData("testnet-seed.mircoin.net", true));
- //       vSeeds.push_back(CDNSSeedData("tcreaseed.owldevelopers.site", true));
+        vSeeds.push_back(CDNSSeedData("testnet-seed.mircoin.net", true));
+        vSeeds.push_back(CDNSSeedData("tcreaseed.owldevelopers.site", true));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,43);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
@@ -280,15 +280,15 @@ public:
         consensus.fPowNoRetargeting = true;
         consensus.nRuleChangeActivationThreshold = 2700; // 75% for testchains
         consensus.nMinerConfirmationWindow = 3600; // Faster than normal for regtest (144 instead of 2016)
-//        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
-//        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 0;
- //       consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 999999999999ULL;
- //       consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-//        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0;
-//        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 999999999999ULL;
-//        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-//        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 0;
-//        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 0;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 999999999999ULL;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 999999999999ULL;
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 0;
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL;
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x00");
